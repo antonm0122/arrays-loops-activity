@@ -7,6 +7,12 @@
  *    hobbies
  */
 
+let hobbies = ['reading', 'movies', 'yoga', 'crafting'];
+
+for (hobby of hobbies) {
+     console.log (hobby);
+}
+console.log ('Number of hobbies:', hobbies.length)
 
 // Example output
 // 1. swimming
@@ -30,6 +36,18 @@
 // green, red, teal, orange, teal
 // Teal was found 2 times
 
+let colors = ['blue', 'green', 'teal', 'purple', 'teal'];
+let tealCount = 0;
+for (let index = 0; index < colors.length; index +=1 ){
+       if (colors[index] == 'teal') {
+          tealCount += 1;
+       }
+     else{ 
+          tealCount +=0
+     }
+}
+
+console.log ('Teal Count:', tealCount)
 
 /**
  * #3 Even & Odd
@@ -48,6 +66,23 @@
 // Even 2, 8, 4, 2
 
 
+let numbers = [4,5,6,7,8,9]
+let oddNumbers = []; 
+let evenNumbers = []; 
+
+for (let index = 0; index < numbers.length; index +=1 ){
+     if(numbers[index] % 2 === 0) {
+          evenNumbers.push(numbers[index]);
+     }
+     else{
+          oddNumbers.push(numbers[index]);
+     }
+}
+
+console.log('Full Array:', numbers);
+console.log('Odd Numbers:', oddNumbers);
+console.log('Even Numbers:', evenNumbers)
+
 /**
  * #4 Flipping Switches
  * --------------------
@@ -62,6 +97,19 @@
 // true, false, true, true
 // Toggled false, true, false, false
 
+let boolean = [true,true,false,true,false,false];
+let toggled = [];
+for (let index = 0; index < boolean.length; index +=1 ){
+     if(boolean[index] === true){
+          toggled.push(false);
+     }
+     else{
+          toggled.push(true)
+     }
+}
+
+console.log('Base Values:', boolean);
+console.log('Opposite Values:', toggled)
 
 /**
  * #5 (STRETCH) Remove 0's
@@ -80,6 +128,17 @@
 // Before loop 3, 0, 2, 8, 0, 0, 0
 // After loop 3, 0, 2, 8
 
+let newNumbers = [13, 4, 22, 0, 23, 0, 0, 0];
+
+
+
+for (let index = 0; index <= newNumbers.length; index +=1 ){
+    if (newNumbers[index] === 0 ){
+     newNumbers.pop(newNumbers[index]);
+    }
+
+}
+console.log('New Values:', newNumbers);
 
 /**
  * #6 (STRETCH) Highest & Lowest
